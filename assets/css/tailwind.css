@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Cabin";
+  min-height: 100vh;
+}
+
+@layer components {
+  .table-row {
+    @apply border border-slate-400;
+    td,
+    th {
+      @apply border border-slate-400 text-left min-[540px]:px-5 px-3 py-2;
+    }
+  }
+  .inner-table {
+    th {
+      @apply text-left flex items-start py-2;
+    }
+    td {
+      @apply min-[400px]:pl-5 pl-2 py-2;
+    }
+  }
+  .table-btn {
+    @apply border border-green-600 bg-green-600 py-2 px-5 rounded text-white hover:bg-white hover:text-green-600 duration-300 w-full min-[540px]:w-32;
+  }
+}
